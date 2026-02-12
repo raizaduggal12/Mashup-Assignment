@@ -89,20 +89,24 @@ The web app is deployed on **Render**:
 # 📁 Project Structure
 
 ```
-Mashup-Assignment/
+Ass7/
 │
-├── audio/                 # Temporary extracted audio files
-├── clips/                 # Trimmed audio clips
-├── downloads/             # Downloaded source videos│
-├── 102303068.py           # Part 1: CLI mashup generator
-├── web_mashup.py          # Part 2: Flask web application│
-├── mashup.mp3             # Generated mashup output
-├── mashup.zip             # Zipped mashup for email sendingfor Part1│
-├── requirements.txt       # Python dependencies
-├── runtime.txt            # Python version for Render
-├── render.yaml            # Render deployment config (optional)│
-├── README.md              # Project documentation
-└── LICENSE                # License file
+├── audio/              # Temporary extracted audio files
+├── clips/              # Trimmed audio clips
+├── downloads/          # Downloaded source videos
+├── images/             # Screenshots used in README
+│ ├── app.png
+│ ├── email.png
+│ └── cli.png
+├── 102303068.py        # Part 1: CLI mashup generator
+├── web_mashup.py       # Part 2: Flask web application
+├── mashup.mp3          # Generated mashup output
+├── mashup.zip          # Zipped mashup for email sending (Part 1)│
+├── requirements.txt    # Python dependencies
+├── runtime.txt         # Python version for Render
+├── render.yaml         # Render deployment config (optional)│
+├── README.md           # Project documentation
+└── LICENSE             # License file
 ```
 
 
