@@ -3,7 +3,7 @@ import os
 import zipfile
 import smtplib
 from email.message import EmailMessage
-from moviepy.editor import AudioFileClip
+from moviepy import AudioFileClip
 from pydub import AudioSegment
 
 app = Flask(__name__)
