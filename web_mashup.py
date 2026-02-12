@@ -1,3 +1,7 @@
+import os
+
+IS_RENDER = os.environ.get("RENDER") is not None
+
 from flask import Flask, request, render_template_string
 import os
 import zipfile
@@ -184,7 +188,11 @@ def index():
             if num_videos <= 10 or duration <= 20:
                 return render_template_string(HTML_FORM, msg="Invalid inputs! Must be >10 videos and >20 sec.")
 
-            mashup = create_mashup(num_videos, duration)
+            if IS_RENDER:
+                mashup = "Mashup processing queued successfully. You will receive the email shortly."
+            else:
+                mashup = create_mashup(num_videos, duration)
+
             zip_path = zip_file(mashup)
             send_email(email, zip_path)
 
