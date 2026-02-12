@@ -126,7 +126,7 @@ def create_mashup(num_videos, duration, output_file="mashup.mp3"):
         video_path = os.path.join(video_folder, video)
         audio_path = f"audio/audio{i}.mp3"
 
-        AudioFileClip(video_path).write_audiofile(audio_path, verbose=False, logger=None)
+        AudioFileClip(video_path).write_audiofile(audio_path, logger=None)
 
         sound = AudioSegment.from_mp3(audio_path)
         clip = sound[: duration * 1000]
