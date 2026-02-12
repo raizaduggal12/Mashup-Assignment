@@ -72,58 +72,6 @@ The web app is deployed on **Render**:
 
 ---
 
-# ▶️ How to Run Locally
-
-## 1️⃣ Clone repository
-
-```bash
-git clone https://github.com/raizaduggal12/Mashup-Assignment.git
-cd Mashup-Assignment
-```
-
-## 2️⃣ Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## 3️⃣ Run CLI version
-
-```bash
-python <ROLLNO>.py
-```
-
-## 4️⃣ Run Web App
-
-```bash
-python web_mashup.py
-```
-
-Open browser:
-
-```
-http://127.0.0.1:5000
-```
-
----
-
-# ☁️ Deployment Details (Render)
-
-### Build Command
-```
-pip install -r requirements.txt
-```
-
-### Start Command
-```
-gunicorn web_mashup:app
-```
-
-⚠️ Heavy audio processing is **disabled on cloud** to avoid timeout/memory limits.  
-✔ Full mashup functionality works **locally**.
-
----
-
 # 📷 Screenshots
 
 ## 🖥️ Web App Interface
@@ -140,10 +88,28 @@ gunicorn web_mashup:app
 # 👩‍💻 Author
 
 **Name:** Raiza Duggal  
-**Course:** B.Tech Computer Science  
-**Assignment:** Mashup Generation using Python & Flask  
 
 ---
+
+# 📁 Project Structure
+
+```
+Mashup-Assignment/
+│
+├── audio/                 # Temporary extracted audio files
+├── clips/                 # Trimmed audio clips
+├── downloads/             # Downloaded source videos│
+├── 102303068.py           # Part 1: CLI mashup generator
+├── web_mashup.py          # Part 2: Flask web application│
+├── mashup.mp3             # Generated mashup output
+├── mashup.zip             # Zipped mashup for email sendingfor Part1│
+├── requirements.txt       # Python dependencies
+├── runtime.txt            # Python version for Render
+├── render.yaml            # Render deployment config (optional)│
+├── README.md              # Project documentation
+└── LICENSE                # License file
+```
+
 
 # ✅ Conclusion
 
@@ -158,24 +124,4 @@ It provides a **complete end-to-end mashup generation system**.
 
 ---
 
-# 📸 Important for Submission
 
-You must **add 3 screenshots** in the repository:
-
-1. **Web app page**
-2. **Email received with mashup.zip**
-3. **CLI running in terminal**
-
-After uploading screenshots, replace:
-
-```
-*(Add screenshot here)*
-```
-
-with:
-
-```md
-![Web App](screenshots/web.png)
-![Email](screenshots/email.png)
-![CLI](screenshots/cli.png)
-```
